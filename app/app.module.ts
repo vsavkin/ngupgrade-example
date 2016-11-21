@@ -13,7 +13,6 @@ export const footballApp = angular.module('footballApp', [
   'ngMaterial',
   'ngMdIcons',
   leagueModule.name,
-  // routerRootModule.name,
   teamServiceModule.name,
 ]);
 
@@ -33,7 +32,8 @@ function log($rootScope: angular.IScope) {
 footballApp.run(log);
 
 /** Component containing the ng1-router-controller ng-view */
-footballApp.component('footballApp', {
-  template : '<ng2-router-root></ng2-router-root>',
-  controllerAs : 'ctrl'
-});
+// we no longer need this
+// footballApp.component('footballApp', {
+//   template : '<ng2-router-root></ng2-router-root>',
+//   controllerAs : 'ctrl'
+// });

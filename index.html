@@ -30,35 +30,7 @@
     </script>
   </head>
 
-  <body ng-cloak>
-
-    <!-- top bar -->
-    <md-toolbar class="md-hue-2">
-      <div class="md-toolbar-tools">
-        <h2>
-          <span>Football teams</span>
-        </h2>
-        <span flex></span>
-      </div>
-    </md-toolbar>
-
-    <section layout="row" flex style="height: 100%">
-
-      <!-- Main content area -->
-      <md-content flex layout-padding>
-
-        <!-- Route-based content -->
-        <div layout="column" layout-align="top">
-          <football-app></football-app>
-        </div>
-
-        <!-- Loading indicator -->
-        <div ng-show="loading" layout="row" layout-sm="column" layout-align="center center">
-          <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-        </div>
-
-      </md-content>
-    </section>
-
+  <body>
+    <ng2-router-root></ng2-router-root>
   </body>
 </html>
