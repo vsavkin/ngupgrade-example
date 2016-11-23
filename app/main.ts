@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { UpgradeModule } from '@angular/upgrade/static';
 
 import { footballApp } from './app.module';
-import { AppModule } from './app2.module';
+import { AppModule, ROOT_OUTLET_LOADED } from './app2.module';
 
 
 export function bootstrap(
@@ -19,8 +19,7 @@ export function bootstrap(
 }
 
 bootstrap(platformBrowserDynamic(), AppModule, document.body, footballApp).then((ref) => {
-  setTimeout(() => {
-    console.log('initializing');
+  ref.injector.get(ROOT_OUTLET_LOADED).done.then(() => {
     ref.injector.get(Router).initialNavigation();
-  }, 0);
+  });
 });
